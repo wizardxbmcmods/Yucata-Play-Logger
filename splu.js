@@ -98,7 +98,7 @@
     tmpLink=document.createElement('link');
     tmpLink.type="text/css";
     tmpLink.rel="stylesheet";
-    tmpLink.href="https://rawgit.com/dazeysan/SPLU/master/Source%20Code/font-awesome/css/font-awesome.min.css";
+    tmpLink.href="https://rawgit.com/wizardxbmcmods/Yucata-Play-Logger/master/font-awesome.min.css";
     document.getElementsByTagName("head")[0].appendChild(tmpLink);
     
   function initSPLU(){
@@ -128,7 +128,7 @@
     var BRlogMain=document.createElement('div');
     BRlogMain.id='BRlogMain';
     BRlogMain.setAttribute("style","display:table; position: absolute; left: 50px; z-index: 565; border-radius:15px;");
-    BRlogMain.style.top=self.pageYOffset+90+"px";
+    BRlogMain.style.top=self.pageYOffset+400+"px";
     var BRlogRow=document.createElement('div');
     BRlogRow.id='BRlogRow';
     BRlogRow.setAttribute("style","display:table-row;");
