@@ -29,7 +29,7 @@ chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
 			function myListener(tabId, info, tab) {
 				if (info.status == "complete") {
 					// This line runs the SPLU script within the BGG page
-					chrome.tabs.executeScript(tab.id, { code: "window.onready;document.body.appendChild(document.createElement('script')).src='https://rawgit.com/wizardxbmcmods/Yucata-Play-Logger/master/splu.js'" }, null);
+					chrome.tabs.executeScript(tab.id, { code: "window.onready;document.body.appendChild(document.createElement('script')).src='https://rawgit.com/wizardxbmcmods/SPLU/master/splu.js'" }, null);
 					// end of splu script
 					/* Now, let's relieve ourselves from our listener duties */
 					chrome.tabs.onUpdated.removeListener(myListener);
