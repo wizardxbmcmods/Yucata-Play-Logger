@@ -56,7 +56,7 @@ chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
 
 function GoToBGGPage(gameid) {
 	var newurl = "https://www.boardgamegeek.com/boardgame/" + gameid;
-	window.open(newurl, "Log a Play", "height=200,width=200");
+	window.open(newurl, "Log a Play", "height=600,width=1100");
 	//chrome.tabs.create({url:"https://www.boardgamegeek.com/boardgame/" + gameid});
 
 }
