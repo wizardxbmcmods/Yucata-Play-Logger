@@ -3,7 +3,7 @@
   "description": "Log Yucata.de plays on BGG",
   "version": "1.0",
   "permissions": [
-    "tabs", "http://*/*", "https://*/*"
+    "tabs", "http://*/*", "https://*/*", "contextMenus"
   ],
   "background": {
     "scripts": ["background.js"],

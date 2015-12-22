@@ -1,5 +1,26 @@
 // this is the background code...
 
+//COntextMenu Code
+// Set up context menu at install time.
+chrome.runtime.onInstalled.addListener(function() {
+  var context = "selection";
+  var title = "Log a Play on BGG";
+  var id = chrome.contextMenus.create({"title": title, "contexts":["page"],
+                                         "id": "context" + context});  
+});
+
+// add click event
+chrome.contextMenus.onClicked.addListener(onClickHandler);
+
+// The onClicked callback function.
+function onClickHandler(info, tab) {
+  var sText = info.selectionText;
+  var url = "https://www.google.com/search?q=" + encodeURIComponent(sText);  
+  window.open(url, '_blank');
+};
+
+//Toolbar Button Code
+
 // listen for our browerAction to be clicked
 chrome.browserAction.onClicked.addListener(function (tab) {
 
@@ -47,6 +68,8 @@ chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
 		});
 		  		  
 		}
+	else
+alert("You must be on Yucata.de to use this tool.");
 
 });
 
